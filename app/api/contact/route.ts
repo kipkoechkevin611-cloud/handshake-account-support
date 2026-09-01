@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
     };
 
     const contactEmail = process.env.CONTACT_EMAIL || 'smartassignmentsolver@gmail.com';
-    const fromEmail = process.env.FROM_EMAIL || 'noreply@handshake-account-support.com';
+    const fromEmail = process.env.FROM_EMAIL || 'onboarding@resend.dev';
 
     // Send email to business owner
     const { data, error } = await resend.emails.send({
