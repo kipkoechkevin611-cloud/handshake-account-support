@@ -13,11 +13,14 @@ export default function ApplyPage() {
     phone: '',
     school: '',
     accountStatus: '',
+    primaryGoal: '',
     message: '',
+    agreement: false,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -46,6 +49,18 @@ export default function ApplyPage() {
       newErrors.accountStatus = 'Please select your Handshake account status';
     }
 
+    if (!formData.primaryGoal.trim()) {
+      newErrors.primaryGoal = 'Primary goal is required';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+
+    if (!formData.agreement) {
+      newErrors.agreement = 'You must agree to the terms';
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -58,18 +73,42 @@ export default function ApplyPage() {
     }
 
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (!response.ok) {
+        throw new Error('Failed to submit application');
+      }
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmitError('Something went wrong while sending your application. Please try again.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: checked }));
+    // Clear error when user checks
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
     }
@@ -90,7 +129,7 @@ export default function ApplyPage() {
             </div>
             <h1 className="text-3xl font-bold text-[#0B1220] mb-4">Application Received</h1>
             <p className="text-lg text-[#64748B] mb-8">
-              Thank you. Your information has been received. We'll review your application and contact you regarding the next steps.
+              Thank you for reaching out. Your information has been sent and I will contact you using the details you provided.
             </p>
             <a
               href="/"
@@ -117,7 +156,7 @@ export default function ApplyPage() {
           >
             <h1 className="text-3xl sm:text-4xl font-bold text-[#0B1220] mb-4">Become a Client</h1>
             <p className="text-lg text-[#64748B]">
-              Complete the short application below and we'll review your information.
+              Complete the short application below and I'll review your information.
             </p>
           </motion.div>
 
@@ -234,9 +273,9 @@ export default function ApplyPage() {
                 } focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-colors bg-white`}
               >
                 <option value="">Select an option</option>
-                <option value="existing">I already have a Handshake account</option>
-                <option value="new">I don't have a Handshake account</option>
-                <option value="unsure">I'm not sure</option>
+                <option value="existing">Yes, I already have a Handshake account</option>
+                <option value="new">No, I don't have a Handshake account</option>
+                <option value="planning">Not yet, but I plan to create one</option>
               </select>
               {errors.accountStatus && (
                 <p className="mt-2 text-sm text-red-500 flex items-center gap-1">
@@ -247,8 +286,31 @@ export default function ApplyPage() {
             </div>
 
             <div>
+              <label htmlFor="primaryGoal" className="block text-sm font-medium text-[#111827] mb-2">
+                Primary Goal / Type of Support <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="primaryGoal"
+                name="primaryGoal"
+                value={formData.primaryGoal}
+                onChange={handleChange}
+                className={`w-full px-4 py-3 rounded-lg border ${
+                  errors.primaryGoal ? 'border-red-500' : 'border-[#e5e7eb]'
+                } focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-colors`}
+                placeholder="e.g., Profile optimization, opportunity monitoring, application support"
+              />
+              {errors.primaryGoal && (
+                <p className="mt-2 text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle size={14} />
+                  {errors.primaryGoal}
+                </p>
+              )}
+            </div>
+
+            <div>
               <label htmlFor="message" className="block text-sm font-medium text-[#111827] mb-2">
-                Short Message
+                Short Message <span className="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
@@ -256,17 +318,58 @@ export default function ApplyPage() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg border border-[#e5e7eb] focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-colors resize-none"
-                placeholder="Tell us a bit about your situation..."
+                className={`w-full px-4 py-3 rounded-lg border ${
+                  errors.message ? 'border-red-500' : 'border-[#e5e7eb]'
+                } focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-colors resize-none`}
+                placeholder="Tell me a bit about your situation and what you're looking for..."
               />
+              {errors.message && (
+                <p className="mt-2 text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle size={14} />
+                  {errors.message}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  id="agreement"
+                  name="agreement"
+                  checked={formData.agreement}
+                  onChange={handleCheckboxChange}
+                  className={`mt-1 w-5 h-5 rounded border ${
+                    errors.agreement ? 'border-red-500' : 'border-[#e5e7eb]'
+                  } focus:outline-none focus:ring-2 focus:ring-[#2563EB] cursor-pointer`}
+                />
+                <span className="text-sm text-[#64748B] leading-relaxed">
+                  I understand that this is an independent service, that I remain responsible for my Handshake account and compliance with applicable platform rules, and that no job or earnings are guaranteed.
+                </span>
+              </label>
+              {errors.agreement && (
+                <p className="mt-2 text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle size={14} />
+                  {errors.agreement}
+                </p>
+              )}
             </div>
 
             <div className="bg-[#FEF3C7] border border-[#FCD34D] rounded-lg p-4">
               <p className="text-sm text-[#92400E]">
                 <strong>Privacy Notice:</strong> Do not submit passwords or authentication codes through this form. 
-                We only collect the information necessary to evaluate your application.
+                I only collect the information necessary to evaluate your application.
               </p>
             </div>
+
+            {submitError && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                <p className="text-sm text-red-600 flex items-center gap-1">
+                  <AlertCircle size={14} />
+                  {submitError}
+                </p>
+              </div>
+            )}
 
             <button
               type="submit"

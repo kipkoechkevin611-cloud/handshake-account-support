@@ -9,10 +9,11 @@ export default function Footer() {
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Services', href: '#services' },
     { name: 'Partnership', href: '#partnership' },
+    { name: 'Why Work With Me', href: '#why-work-with-me' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Apply', href: '/apply' },
-    { name: 'Privacy Policy', href: '#privacy' },
-    { name: 'Terms of Service', href: '#terms' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
   ];
 
   return (

@@ -8,38 +8,33 @@ export default function WhyWorkWithUs() {
   const benefits = [
     {
       icon: Settings,
-      title: 'Consistent Account Management',
-      description: 'Regular support and organization for your Handshake account.',
+      title: 'Consistent Support',
+      description: 'Stay organized and maintain a more consistent opportunity workflow.',
     },
     {
       icon: MessageSquare,
       title: 'Clear Communication',
-      description: 'Stay informed about agreed account activities and updates.',
+      description: 'Know what is being worked on and receive regular updates.',
     },
     {
       icon: FileCheck,
       title: 'Transparent Agreement',
-      description: 'Partnership terms discussed and understood before service begins.',
+      description: 'Understand expectations and compensation before work begins.',
     },
     {
       icon: Users,
       title: 'Simple Partnership Structure',
-      description: 'Straightforward 50/50 arrangement for covered earnings.',
+      description: 'Straightforward terms without hidden fees.',
     },
     {
       icon: Shield,
-      title: 'Client Ownership',
-      description: 'You retain full ownership of your Handshake account.',
-    },
-    {
-      icon: Briefcase,
-      title: 'Independent Service',
-      description: 'Professional support without platform affiliation claims.',
+      title: 'You Retain Ownership',
+      description: 'Your account, personal information, and career decisions remain yours.',
     },
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#0B1220]">
+    <section id="why-work-with-me" className="py-16 sm:py-20 lg:py-24 bg-[#0B1220]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,7 +43,7 @@ export default function WhyWorkWithUs() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Why Clients Choose Us
+            Why Work With Me
           </h2>
         </motion.div>
 

@@ -11,32 +11,32 @@ export default function Services() {
     {
       icon: Settings,
       title: 'Account Setup Guidance',
-      description: 'Assistance understanding the setup process and preparing your account.',
+      description: 'Help clients understand how to properly configure and complete their account.',
     },
     {
       icon: UserCheck,
       title: 'Profile Optimization',
-      description: 'Improve the organization and presentation of your Handshake profile.',
+      description: 'Improve profile presentation, completeness, wording, skills, and professional positioning.',
     },
     {
       icon: Search,
       title: 'Opportunity Monitoring',
-      description: 'Monitor relevant opportunities available through your account.',
+      description: 'Help identify and organize relevant opportunities based on the client\'s goals and qualifications.',
     },
     {
       icon: FileText,
       title: 'Application Support',
-      description: 'Receive assistance organizing and managing applications.',
+      description: 'Help clients prepare stronger application materials and understand application requirements.',
     },
     {
       icon: FolderOpen,
-      title: 'Account Organization',
-      description: 'Keep account activity structured and easier to manage.',
+      title: 'Organization & Management',
+      description: 'Help clients organize applications, deadlines, opportunities, follow-ups, and account-related activities.',
     },
     {
       icon: Bell,
-      title: 'Ongoing Updates',
-      description: 'Receive communication about relevant activity and agreed management tasks.',
+      title: 'Communication & Updates',
+      description: 'Provide clear updates about progress, opportunities, recommendations, and next steps.',
     },
   ];
 

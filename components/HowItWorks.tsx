@@ -9,32 +9,32 @@ export default function HowItWorks() {
     {
       number: '01',
       icon: MessageCircle,
-      title: 'Start the Conversation',
-      description: 'Submit your information through our client application.',
+      title: 'Contact Me',
+      description: 'Submit the client application form and tell me what type of support you need.',
     },
     {
       number: '02',
       icon: UserPlus,
-      title: 'Create Your Account',
-      description: 'You create and retain ownership of your own Handshake account.',
+      title: 'You Create & Own Your Account',
+      description: 'Your Handshake account remains yours and under your ownership.',
     },
     {
       number: '03',
       icon: Handshake,
-      title: 'Agree on the Partnership',
-      description: 'We discuss responsibilities, expectations and the 50/50 revenue-sharing arrangement.',
+      title: 'We Agree on the Arrangement',
+      description: 'We discuss the scope of support, communication process, expectations, and applicable 50/50 partnership terms.',
     },
     {
       number: '04',
       icon: Settings,
-      title: 'Authorized Account Support',
-      description: 'With your authorization, we help organize, monitor and optimize your Handshake presence.',
+      title: 'Support & Optimization Begins',
+      description: 'I help with profile optimization, opportunity research, organization, application preparation, and agreed support activities.',
     },
     {
       number: '05',
       icon: DollarSign,
-      title: 'Share Agreed Earnings',
-      description: 'Where applicable, earnings covered by the agreed arrangement are divided according to the 50/50 partnership.',
+      title: 'Transparent Partnership',
+      description: 'Any eligible earnings specifically covered by our written agreement are handled according to the agreed 50/50 arrangement.',
     },
   ];
 

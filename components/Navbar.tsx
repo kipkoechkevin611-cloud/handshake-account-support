@@ -12,6 +12,7 @@ export default function Navbar() {
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Services', href: '#services' },
     { name: 'Partnership', href: '#partnership' },
+    { name: 'Why Work With Me', href: '#why-work-with-me' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];

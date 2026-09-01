@@ -2,16 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, UserCheck, FileText, Lock } from 'lucide-react';
 import Button from './Button';
 
 export default function Hero() {
-  const trustItems = [
-    { icon: UserCheck, text: 'Client-owned accounts' },
-    { icon: Shield, text: 'Authorized support' },
-    { icon: FileText, text: 'Transparent 50/50 arrangement' },
-    { icon: Lock, text: 'Independent service' },
-  ];
 
   return (
     <section className="pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-20 lg:pb-24 bg-[#0B1220]">
@@ -23,10 +16,10 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6">
-              Professional Handshake Account Support, Built Around Your Goals.
+              Professional Handshake Support That Helps You Stay Opportunity-Ready
             </h1>
             <p className="text-lg sm:text-xl text-[#94a3b8] mb-8 leading-relaxed">
-              Get professional guidance, account organization, opportunity monitoring and ongoing support while keeping ownership of your Handshake account.
+              I help students, graduates, and professionals optimize their Handshake presence, organize opportunities, prepare stronger applications, and stay on top of their career workflow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button href="/apply" variant="primary">
@@ -36,11 +29,15 @@ export default function Hero() {
                 How It Works
               </Button>
             </div>
-            <div className="text-sm text-[#94a3b8] mb-8 font-medium">
+            <div className="text-sm text-[#94a3b8] mb-6 font-medium">
               Independent service. Client-owned accounts. Transparent 50/50 partnership.
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {trustItems.map((item, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              {[
+                { text: 'You retain ownership of your account' },
+                { text: 'Clear and transparent agreement' },
+                { text: '50/50 partnership on agreed eligible earnings' },
+              ].map((item, index) => (
                 <motion.div
                   key={item.text}
                   initial={{ opacity: 0, y: 10 }}
@@ -48,10 +45,13 @@ export default function Hero() {
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
                   className="flex items-center gap-2 text-xs sm:text-sm text-[#94a3b8]"
                 >
-                  <item.icon size={16} className="text-[#2563EB]" />
+                  <div className="w-1.5 h-1.5 bg-[#2563EB] rounded-full" />
                   <span>{item.text}</span>
                 </motion.div>
               ))}
+            </div>
+            <div className="bg-[#1e293b]/50 border border-[#334155] rounded-lg p-4 text-xs text-[#94a3b8]">
+              Independent support service. Not affiliated with or endorsed by Handshake. Clients remain responsible for complying with Handshake's Terms of Service and applicable university or employer requirements.
             </div>
           </motion.div>
 

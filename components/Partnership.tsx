@@ -15,7 +15,7 @@ export default function Partnership() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0B1220] mb-4">A Simple, Transparent Partnership</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0B1220] mb-4">Transparent 50/50 Partnership</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-16">
@@ -26,8 +26,11 @@ export default function Partnership() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-lg text-[#64748B] mb-8 leading-relaxed">
-              Our partnership operates on a straightforward 50/50 basis for earnings covered by the agreed arrangement. 
-              The terms, responsibilities and expectations are discussed before service begins.
+              For opportunities specifically covered by our written agreement, eligible earnings are shared equally: 50% to the client and 50% to the support partner.
+            </p>
+
+            <p className="text-sm text-[#64748B] mb-8 leading-relaxed">
+              The exact scope, eligible earnings, payment process, and responsibilities are agreed upon before services begin.
             </p>
 
             <div className="space-y-6">
@@ -87,7 +90,7 @@ export default function Partnership() {
                   <div className="text-4xl sm:text-5xl text-[#2563EB]">+</div>
                   <div>
                     <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#2563EB] mb-2">50%</div>
-                    <div className="text-base sm:text-lg font-semibold">MANAGEMENT PARTNER</div>
+                    <div className="text-base sm:text-lg font-semibold">SUPPORT PARTNER</div>
                   </div>
                 </div>
               </div>
@@ -100,8 +103,7 @@ export default function Partnership() {
               className="bg-[#FEF3C7] border border-[#FCD34D] rounded-lg p-4 mt-6"
             >
               <p className="text-sm text-[#92400E] leading-relaxed">
-                Results and earnings are not guaranteed. Any earnings depend on available opportunities, eligibility, 
-                successful outcomes and the terms of the specific arrangement.
+                No jobs, opportunities, interviews, or earnings are guaranteed.
               </p>
             </motion.div>
           </motion.div>
@@ -113,8 +115,8 @@ export default function Partnership() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Button href="/apply" variant="primary">
-            Become a Client
+          <Button href="#contact" variant="primary">
+            Discuss the Partnership
           </Button>
         </motion.div>
       </div>

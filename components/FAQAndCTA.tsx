@@ -11,35 +11,35 @@ export default function FAQAndCTA() {
   const faqs = [
     {
       question: 'Who owns the Handshake account?',
-      answer: 'The client creates and retains ownership of their own Handshake account.',
+      answer: 'The client always owns their own Handshake account. The service does not claim ownership of client accounts or personal data.',
     },
     {
       question: 'How does the 50/50 arrangement work?',
-      answer: 'Where earnings fall within the agreed partnership arrangement, applicable proceeds are shared 50/50 between the client and service provider.',
+      answer: 'Only earnings specifically covered by the written agreement are divided according to the agreed partnership structure.',
     },
     {
-      question: 'Do you guarantee jobs or earnings?',
-      answer: 'No. The service does not guarantee employment, opportunities, successful applications or earnings.',
-    },
-    {
-      question: 'What information do I need to get started?',
-      answer: 'Basic contact and educational information is collected through the application form. Do not submit passwords or authentication codes through the public website.',
+      question: 'What information do you need to get started?',
+      answer: 'Full name, email, phone/WhatsApp, school/university, current Handshake status, career goals, and information relevant to the requested support. Never send your password, authentication codes, banking password, or other sensitive login credentials through this website.',
     },
     {
       question: 'How often will I receive updates?',
-      answer: 'Communication frequency is agreed between the client and service provider.',
+      answer: 'Update frequency is agreed with the client and communication can happen through email or WhatsApp where appropriate.',
     },
     {
       question: 'Can I stop the service?',
-      answer: 'Yes, subject to the terms of the agreement between the client and service provider.',
-    },
-    {
-      question: 'Is this Handshake?',
-      answer: 'No. This is an independent service and does not claim affiliation with Handshake.',
+      answer: 'Yes. Cancellation/termination rules follow the written agreement.',
     },
     {
       question: 'How is account access handled securely?',
-      answer: 'Only authorized and secure account-access methods should be used. Never share unnecessary credentials or authentication codes.',
+      answer: 'Clients retain control of their accounts. Sensitive passwords, authentication codes, and security credentials should not be submitted through this website. Any support process must respect platform security requirements and applicable terms.',
+    },
+    {
+      question: 'Is this service affiliated with Handshake?',
+      answer: 'No. This is an independent support service and is not affiliated with, sponsored by, operated by, or endorsed by Handshake.',
+    },
+    {
+      question: 'Are jobs or earnings guaranteed?',
+      answer: 'No. Opportunities, interviews, offers, projects, and earnings depend on many factors and cannot be guaranteed.',
     },
   ];
 
@@ -103,21 +103,21 @@ export default function FAQAndCTA() {
             transition={{ duration: 0.6 }}
             className="lg:sticky lg:top-24 h-fit"
           >
-            <div className="bg-[#0B1220] rounded-2xl p-8 sm:p-12 text-white">
+            <div id="contact" className="bg-[#0B1220] rounded-2xl p-8 sm:p-12 text-white">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Work Together?</h2>
               <p className="text-[#94a3b8] mb-8 leading-relaxed">
-                Tell us a little about yourself and your current Handshake situation. 
-                We'll review your application and discuss whether the service is a good fit.
+                Tell me a little about yourself and your current Handshake situation. 
+                I'll review your application and contact you using the details you provided.
               </p>
               <Button href="/apply" variant="primary" className="w-full sm:w-auto mb-4">
                 Apply to Become a Client →
               </Button>
               <div className="text-center sm:text-left">
                 <a
-                  href="#contact"
+                  href="mailto:contact@handshake-account-support.com"
                   className="text-[#94a3b8] hover:text-white transition-colors text-sm"
                 >
-                  Have a Question? Contact Us
+                  Have a Question? Contact Me
                 </a>
               </div>
             </div>
