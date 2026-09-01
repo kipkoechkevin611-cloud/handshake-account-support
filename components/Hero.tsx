@@ -22,10 +22,10 @@ export default function Hero() {
               I help students, graduates, and professionals optimize their Handshake presence, organize opportunities, prepare stronger applications, and stay on top of their career workflow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button href="/apply" variant="primary">
+              <Button href="#contact" variant="primary" className="w-full sm:w-auto min-h-[44px]">
                 Become a Client
               </Button>
-              <Button href="#how-it-works" variant="secondary">
+              <Button href="#how-it-works" variant="secondary" className="w-full sm:w-auto min-h-[44px]">
                 How It Works
               </Button>
             </div>
@@ -59,16 +59,16 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            className="relative order-2 lg:order-1"
           >
-            <div className="bg-[#1e293b] rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-2xl">
-              <div className="flex gap-4 h-full">
-                {/* Sidebar */}
-                <div className="hidden sm:flex flex-col gap-2 w-32 flex-shrink-0">
+            <div className="bg-[#1e293b] rounded-2xl p-4 sm:p-6 lg:p-8 relative overflow-hidden shadow-2xl">
+              <div className="flex gap-2 sm:gap-4 h-full">
+                {/* Sidebar - hidden on mobile */}
+                <div className="hidden sm:flex flex-col gap-2 w-24 lg:w-32 flex-shrink-0">
                   {['Overview', 'Profile', 'Opportunities', 'Applications', 'Messages', 'Documents', 'Settings'].map((item, index) => (
                     <div
                       key={item}
-                      className={`text-xs font-medium px-3 py-2 rounded-lg cursor-pointer transition-colors ${
+                      className={`text-xs font-medium px-2 lg:px-3 py-2 rounded-lg cursor-pointer transition-colors ${
                         index === 0 ? 'bg-[#2563EB] text-white' : 'text-[#94a3b8] hover:bg-[#334155]'
                       }`}
                     >
@@ -78,67 +78,67 @@ export default function Hero() {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-3 sm:space-y-4">
                   {/* Welcome */}
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-white text-sm text-[#94a3b8]">Welcome back,</div>
-                      <div className="text-white text-lg font-semibold">Alex</div>
+                      <div className="text-white text-xs sm:text-sm text-[#94a3b8]">Welcome back,</div>
+                      <div className="text-white text-base sm:text-lg font-semibold">Alex</div>
                     </div>
-                    <div className="w-8 h-8 bg-[#2563EB] rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-[#2563EB] rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-white text-xs font-semibold">A</span>
                     </div>
                   </div>
 
                   {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="bg-[#0B1220] rounded-lg p-3">
-                      <div className="text-[#94a3b8] text-xs mb-1">Profile Strength</div>
-                      <div className="text-white font-bold text-lg">85%</div>
-                      <div className="text-green-400 text-xs">Excellent</div>
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                    <div className="bg-[#0B1220] rounded-lg p-2 sm:p-3">
+                      <div className="text-[#94a3b8] text-[10px] sm:text-xs mb-1">Profile Strength</div>
+                      <div className="text-white font-bold text-sm sm:text-lg">85%</div>
+                      <div className="text-green-400 text-[10px] sm:text-xs">Excellent</div>
                     </div>
-                    <div className="bg-[#0B1220] rounded-lg p-3">
-                      <div className="text-[#94a3b8] text-xs mb-1">Opportunities</div>
-                      <div className="text-white font-bold text-lg">12</div>
-                      <div className="text-[#2563EB] text-xs">new</div>
+                    <div className="bg-[#0B1220] rounded-lg p-2 sm:p-3">
+                      <div className="text-[#94a3b8] text-[10px] sm:text-xs mb-1">Opportunities</div>
+                      <div className="text-white font-bold text-sm sm:text-lg">12</div>
+                      <div className="text-[#2563EB] text-[10px] sm:text-xs">new</div>
                     </div>
-                    <div className="bg-[#0B1220] rounded-lg p-3">
-                      <div className="text-[#94a3b8] text-xs mb-1">Applications</div>
-                      <div className="text-white font-bold text-lg">8</div>
-                      <div className="text-[#2563EB] text-xs">active</div>
+                    <div className="bg-[#0B1220] rounded-lg p-2 sm:p-3">
+                      <div className="text-[#94a3b8] text-[10px] sm:text-xs mb-1">Applications</div>
+                      <div className="text-white font-bold text-sm sm:text-lg">8</div>
+                      <div className="text-[#2563EB] text-[10px] sm:text-xs">active</div>
                     </div>
                   </div>
 
                   {/* Recent Activity */}
-                  <div className="bg-[#0B1220] rounded-lg p-3">
-                    <div className="text-white text-xs font-semibold mb-3">Recent Activity</div>
-                    <div className="space-y-2">
+                  <div className="bg-[#0B1220] rounded-lg p-2 sm:p-3">
+                    <div className="text-white text-[10px] sm:text-xs font-semibold mb-2 sm:mb-3">Recent Activity</div>
+                    <div className="space-y-1.5 sm:space-y-2">
                       <div className="flex items-center justify-between">
-                        <div className="text-[#94a3b8] text-xs">Software Engineer Intern</div>
-                        <div className="bg-yellow-500/20 text-yellow-400 text-xs px-2 py-0.5 rounded">In Review</div>
+                        <div className="text-[#94a3b8] text-[10px] sm:text-xs truncate">Software Engineer Intern</div>
+                        <div className="bg-yellow-500/20 text-yellow-400 text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded flex-shrink-0">In Review</div>
                       </div>
                       <div className="flex items-center justify-between">
-                        <div className="text-[#94a3b8] text-xs">Data Analyst Role</div>
-                        <div className="bg-blue-500/20 text-blue-400 text-xs px-2 py-0.5 rounded">Screening</div>
+                        <div className="text-[#94a3b8] text-[10px] sm:text-xs truncate">Data Analyst Role</div>
+                        <div className="bg-blue-500/20 text-blue-400 text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded flex-shrink-0">Screening</div>
                       </div>
                       <div className="flex items-center justify-between">
-                        <div className="text-[#94a3b8] text-xs">Product Manager</div>
-                        <div className="bg-green-500/20 text-green-400 text-xs px-2 py-0.5 rounded">Submitted</div>
+                        <div className="text-[#94a3b8] text-[10px] sm:text-xs truncate">Product Manager</div>
+                        <div className="bg-green-500/20 text-green-400 text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded flex-shrink-0">Submitted</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Reminders */}
-                  <div className="bg-[#0B1220] rounded-lg p-3">
-                    <div className="text-white text-xs font-semibold mb-3">Reminders</div>
-                    <div className="space-y-2">
+                  <div className="bg-[#0B1220] rounded-lg p-2 sm:p-3">
+                    <div className="text-white text-[10px] sm:text-xs font-semibold mb-2 sm:mb-3">Reminders</div>
+                    <div className="space-y-1.5 sm:space-y-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-[#2563EB] rounded-full" />
-                        <div className="text-[#94a3b8] text-xs">Update profile summary</div>
+                        <div className="w-1.5 h-1.5 bg-[#2563EB] rounded-full flex-shrink-0" />
+                        <div className="text-[#94a3b8] text-[10px] sm:text-xs">Update profile summary</div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-[#2563EB] rounded-full" />
-                        <div className="text-[#94a3b8] text-xs">Review new opportunities</div>
+                        <div className="w-1.5 h-1.5 bg-[#2563EB] rounded-full flex-shrink-0" />
+                        <div className="text-[#94a3b8] text-[10px] sm:text-xs">Review new opportunities</div>
                       </div>
                     </div>
                   </div>

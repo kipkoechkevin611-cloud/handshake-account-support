@@ -185,7 +185,7 @@ export default function FAQAndCTA() {
                 >
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full text-left bg-[#F8FBFF] hover:bg-[#EAF4FF] border border-[#E2E8F0] rounded-xl p-5 transition-colors"
+                    className="w-full text-left bg-[#F8FBFF] hover:bg-[#EAF4FF] border border-[#E2E8F0] rounded-xl p-4 sm:p-5 transition-colors min-h-[48px] sm:min-h-0"
                     aria-expanded={openIndex === index}
                   >
                     <div className="flex items-center justify-between">
@@ -193,8 +193,9 @@ export default function FAQAndCTA() {
                       <motion.div
                         animate={{ rotate: openIndex === index ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
+                        className="flex-shrink-0"
                       >
-                        <ChevronDown size={18} className="text-[#4A5568] flex-shrink-0" />
+                        <ChevronDown size={20} className="text-[#4A5568]" />
                       </motion.div>
                     </div>
                     <AnimatePresence>
@@ -249,7 +250,7 @@ export default function FAQAndCTA() {
                           name="fullName"
                           value={formData.fullName}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.fullName ? 'border-red-500' : 'border-[#E2E8F0]'}`}
+                          className={`w-full px-4 py-3 min-h-[48px] border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.fullName ? 'border-red-500' : 'border-[#E2E8F0]'}`}
                           placeholder="Your full name"
                         />
                         {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>}
@@ -261,7 +262,7 @@ export default function FAQAndCTA() {
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.email ? 'border-red-500' : 'border-[#E2E8F0]'}`}
+                          className={`w-full px-4 py-3 min-h-[48px] border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.email ? 'border-red-500' : 'border-[#E2E8F0]'}`}
                           placeholder="your@email.com"
                         />
                         {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -273,11 +274,11 @@ export default function FAQAndCTA() {
                       <div>
                         <label className="block text-sm font-medium text-[#0B1F3A] mb-1">Phone / WhatsApp *</label>
                         <input
-                          type="text"
+                          type="tel"
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.phone ? 'border-red-500' : 'border-[#E2E8F0]'}`}
+                          className={`w-full px-4 py-3 min-h-[48px] border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.phone ? 'border-red-500' : 'border-[#E2E8F0]'}`}
                           placeholder="+1 234 567 890"
                         />
                         {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
@@ -289,7 +290,7 @@ export default function FAQAndCTA() {
                           name="school"
                           value={formData.school}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.school ? 'border-red-500' : 'border-[#E2E8F0]'}`}
+                          className={`w-full px-4 py-3 min-h-[48px] border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.school ? 'border-red-500' : 'border-[#E2E8F0]'}`}
                           placeholder="Your school"
                         />
                         {errors.school && <p className="text-red-500 text-xs mt-1">{errors.school}</p>}
@@ -303,7 +304,7 @@ export default function FAQAndCTA() {
                         name="accountStatus"
                         value={formData.accountStatus}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.accountStatus ? 'border-red-500' : 'border-[#E2E8F0]'}`}
+                        className={`w-full px-4 py-3 min-h-[48px] border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.accountStatus ? 'border-red-500' : 'border-[#E2E8F0]'}`}
                       >
                         <option value="">Select an option</option>
                         <option value="Yes">Yes</option>
@@ -320,7 +321,7 @@ export default function FAQAndCTA() {
                         name="primaryGoal"
                         value={formData.primaryGoal}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.primaryGoal ? 'border-red-500' : 'border-[#E2E8F0]'}`}
+                        className={`w-full px-4 py-3 min-h-[48px] border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.primaryGoal ? 'border-red-500' : 'border-[#E2E8F0]'}`}
                       >
                         <option value="">Select your goal</option>
                         <option value="Profile Optimization">Profile Optimization</option>
@@ -341,7 +342,7 @@ export default function FAQAndCTA() {
                         value={formData.message}
                         onChange={handleChange}
                         rows={4}
-                        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.message ? 'border-red-500' : 'border-[#E2E8F0]'}`}
+                        className={`w-full px-4 py-3 min-h-[120px] border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0866E5] ${errors.message ? 'border-red-500' : 'border-[#E2E8F0]'}`}
                         placeholder="Tell me a little about your goals and the support you're looking for..."
                       />
                       {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
@@ -355,7 +356,7 @@ export default function FAQAndCTA() {
                           name="agreement"
                           checked={formData.agreement}
                           onChange={handleCheckboxChange}
-                          className={`mt-1 w-4 h-4 rounded border ${errors.agreement ? 'border-red-500' : 'border-[#E2E8F0]'} focus:ring-2 focus:ring-[#0866E5]`}
+                          className={`mt-1 w-5 h-5 sm:w-4 sm:h-4 rounded border ${errors.agreement ? 'border-red-500' : 'border-[#E2E8F0]'} focus:ring-2 focus:ring-[#0866E5]`}
                         />
                         <span className="text-sm text-[#4A5568]">
                           I understand that this is an independent service, that I remain responsible for my Handshake account and compliance with applicable platform requirements, and that no job or earnings are guaranteed.
@@ -379,7 +380,7 @@ export default function FAQAndCTA() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-[#0866E5] hover:bg-[#0750B8] text-white font-semibold py-4 px-6 rounded-lg transition-colors disabled:bg-[#94a3b8] disabled:cursor-not-allowed"
+                      className="w-full bg-[#0866E5] hover:bg-[#0750B8] text-white font-semibold py-4 px-6 rounded-lg transition-colors disabled:bg-[#94a3b8] disabled:cursor-not-allowed min-h-[52px]"
                     >
                       {isSubmitting ? 'Sending...' : 'Submit Application →'}
                     </button>

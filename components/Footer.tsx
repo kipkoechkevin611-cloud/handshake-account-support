@@ -39,7 +39,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-[#94a3b8] hover:text-white transition-colors text-sm"
+                    className="block py-2 text-[#94a3b8] hover:text-white transition-colors text-sm min-h-[44px] flex items-center"
                   >
                     {link.name}
                   </a>
@@ -56,7 +56,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-[#94a3b8] hover:text-white transition-colors text-sm"
+                    className="block py-2 text-[#94a3b8] hover:text-white transition-colors text-sm min-h-[44px] flex items-center"
                   >
                     {link.name}
                   </a>
@@ -71,7 +71,7 @@ export default function Footer() {
             <div className="space-y-3">
               <a
                 href="mailto:smartassignmentsolver@gmail.com"
-                className="flex items-center gap-2 text-[#94a3b8] hover:text-white transition-colors text-sm"
+                className="flex items-center gap-2 py-2 text-[#94a3b8] hover:text-white transition-colors text-sm min-h-[44px]"
               >
                 <Mail size={16} />
                 smartassignmentsolver@gmail.com

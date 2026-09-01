@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg hover:bg-[#F5F7FA] transition-colors"
+              className="p-3 rounded-lg hover:bg-[#F5F7FA] transition-colors min-w-[44px] min-h-[44px]"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -67,19 +67,19 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white border-t border-[#e5e7eb]"
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="px-4 py-4 space-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block py-2 text-[#64748B] hover:text-[#111827] transition-colors text-sm font-medium"
+                  className="block py-3 px-4 text-[#64748B] hover:text-[#111827] hover:bg-[#F5F7FA] transition-colors text-sm font-medium rounded-lg min-h-[44px] flex items-center"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
               <div className="pt-4">
-                <Button href="#contact" variant="primary" className="w-full">
+                <Button href="#contact" variant="primary" className="w-full min-h-[44px]">
                   Become a Client
                 </Button>
               </div>
