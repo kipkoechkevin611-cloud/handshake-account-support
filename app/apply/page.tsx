@@ -16,6 +16,7 @@ export default function ApplyPage() {
     primaryGoal: '',
     message: '',
     agreement: false,
+    honeypot: '',
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -84,12 +85,25 @@ export default function ApplyPage() {
         body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to submit application');
+        throw new Error(data.error || 'Failed to submit application');
       }
 
       setIsSubmitting(false);
       setIsSubmitted(true);
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        school: '',
+        accountStatus: '',
+        primaryGoal: '',
+        message: '',
+        agreement: false,
+        honeypot: '',
+      });
     } catch (error) {
       setIsSubmitting(false);
       setSubmitError('Something went wrong while sending your application. Please try again.');
@@ -167,6 +181,17 @@ export default function ApplyPage() {
             onSubmit={handleSubmit}
             className="space-y-6"
           >
+            {/* Honeypot field for spam protection */}
+            <input
+              type="text"
+              name="honeypot"
+              value={formData.honeypot}
+              onChange={handleChange}
+              className="hidden"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+
             <div>
               <label htmlFor="fullName" className="block text-sm font-medium text-[#111827] mb-2">
                 Full Name <span className="text-red-500">*</span>
@@ -376,7 +401,7 @@ export default function ApplyPage() {
               disabled={isSubmitting}
               className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#2563EB] text-white rounded-lg font-semibold hover:bg-[#1d4ed8] disabled:bg-[#94a3b8] disabled:cursor-not-allowed transition-colors"
             >
-              {isSubmitting ? 'Submitting...' : 'Submit Application →'}
+              {isSubmitting ? 'Sending...' : 'Submit Application →'}
             </button>
           </motion.form>
         </div>

@@ -16,7 +16,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6">
-              Professional Handshake Support That Helps You Stay Opportunity-Ready
+              Handshake Support That Helps You Stay Opportunity-Ready
             </h1>
             <p className="text-lg sm:text-xl text-[#94a3b8] mb-8 leading-relaxed">
               I help students, graduates, and professionals optimize their Handshake presence, organize opportunities, prepare stronger applications, and stay on top of their career workflow.

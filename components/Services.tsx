@@ -11,53 +11,50 @@ export default function Services() {
     {
       icon: Settings,
       title: 'Account Setup Guidance',
-      description: 'Help clients understand how to properly configure and complete their account.',
+      description: 'Guidance on properly completing and organizing your Handshake profile.',
     },
     {
       icon: UserCheck,
       title: 'Profile Optimization',
-      description: 'Improve profile presentation, completeness, wording, skills, and professional positioning.',
+      description: 'Improve your profile presentation, completeness, skills, and professional positioning.',
     },
     {
       icon: Search,
       title: 'Opportunity Monitoring',
-      description: 'Help identify and organize relevant opportunities based on the client\'s goals and qualifications.',
+      description: 'Identify and organize relevant opportunities based on your goals and qualifications.',
     },
     {
       icon: FileText,
       title: 'Application Support',
-      description: 'Help clients prepare stronger application materials and understand application requirements.',
+      description: 'Get help preparing stronger materials and understanding application requirements.',
     },
     {
       icon: FolderOpen,
-      title: 'Organization & Management',
-      description: 'Help clients organize applications, deadlines, opportunities, follow-ups, and account-related activities.',
+      title: 'Organization & Workflow Support',
+      description: 'Keep opportunities, deadlines, applications, and follow-ups organized.',
     },
     {
       icon: Bell,
       title: 'Communication & Updates',
-      description: 'Provide clear updates about progress, opportunities, recommendations, and next steps.',
+      description: 'Receive clear updates, recommendations, and next-step guidance.',
     },
   ];
 
   return (
-    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-[#F5F7FA]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 lg:py-24 bg-white">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0B1220] mb-4">
-            Professional Support From Setup to Ongoing Management
-          </h2>
-          <p className="text-lg text-[#64748B] max-w-2xl mx-auto">
-            Keep your Handshake presence organized, monitored and professionally managed with support tailored to your agreed needs.
-          </p>
+          <p className="text-sm font-semibold text-[#0866E5] tracking-wider uppercase mb-3">WHAT I DO</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B1F3A] mb-4">Services I Provide</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {/* Desktop - 6 cards in single row */}
+        <div className="hidden xl:grid grid-cols-6 gap-4">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -65,28 +62,78 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="bg-white border border-[#E2E8F0] rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center h-full flex flex-col"
             >
-              <Card hover>
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-[#2563EB]/10 rounded-lg mb-4">
-                  <service.icon size={24} className="text-[#2563EB]" />
-                </div>
-                <h3 className="font-semibold text-[#0B1220] mb-2">{service.title}</h3>
-                <p className="text-sm text-[#64748B] leading-relaxed">{service.description}</p>
-              </Card>
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-[#0866E5]/10 rounded-lg mb-4 mx-auto">
+                <service.icon size={24} className="text-[#0866E5]" />
+              </div>
+              <h3 className="font-semibold text-[#0B1F3A] mb-2 text-sm leading-tight">{service.title}</h3>
+              <p className="text-xs text-[#4A5568] leading-relaxed flex-1">{service.description}</p>
             </motion.div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <Button href="/apply" variant="primary">
-            Become a Client
-          </Button>
-        </motion.div>
+        {/* Tablet - 3x2 grid */}
+        <div className="hidden md:grid xl:hidden grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="bg-white border border-[#E2E8F0] rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center"
+            >
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-[#0866E5]/10 rounded-lg mb-4 mx-auto">
+                <service.icon size={24} className="text-[#0866E5]" />
+              </div>
+              <h3 className="font-semibold text-[#0B1F3A] mb-2">{service.title}</h3>
+              <p className="text-sm text-[#4A5568] leading-relaxed">{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile - 2x3 or 1 column */}
+        <div className="md:hidden grid grid-cols-2 gap-4 sm:hidden">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="bg-white border border-[#E2E8F0] rounded-xl p-4 shadow-sm text-center"
+            >
+              <div className="inline-flex items-center justify-center w-10 h-10 bg-[#0866E5]/10 rounded-lg mb-3 mx-auto">
+                <service.icon size={20} className="text-[#0866E5]" />
+              </div>
+              <h3 className="font-semibold text-[#0B1F3A] mb-1 text-xs leading-tight">{service.title}</h3>
+              <p className="text-xs text-[#4A5568] leading-relaxed">{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Small mobile - single column */}
+        <div className="hidden sm:grid md:hidden grid-cols-1 gap-4">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="bg-white border border-[#E2E8F0] rounded-xl p-5 shadow-sm flex items-start gap-4"
+            >
+              <div className="flex-shrink-0 w-10 h-10 bg-[#0866E5]/10 rounded-lg flex items-center justify-center">
+                <service.icon size={20} className="text-[#0866E5]" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#0B1F3A] mb-1">{service.title}</h3>
+                <p className="text-sm text-[#4A5568] leading-relaxed">{service.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

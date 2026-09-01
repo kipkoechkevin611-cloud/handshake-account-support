@@ -17,15 +17,15 @@ export default function ClientCTA() {
             Ready to Work Together?
           </h2>
           <p className="text-lg text-[#64748B] mb-8 max-w-2xl mx-auto">
-            Tell us a little about yourself and your current Handshake situation. 
-            We'll review your application and discuss whether the service is a good fit.
+            Tell me a little about yourself and your current Handshake situation.
+            I'll review your application and discuss whether the service is a good fit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/apply" variant="primary">
               Apply to Become a Client
             </Button>
             <Button href="#contact" variant="secondary">
-              Have a Question? Contact Us
+              Have a Question? Contact Me
             </Button>
           </div>
         </motion.div>

@@ -14,7 +14,6 @@ export default function Navbar() {
     { name: 'Partnership', href: '#partnership' },
     { name: 'Why Work With Me', href: '#why-work-with-me' },
     { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -27,7 +26,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex-shrink-0">
-            <a href="#" className="text-xl sm:text-2xl font-bold text-[#0B1220]">
+            <a href="/" className="text-xl sm:text-2xl font-bold text-[#0B1220]">
               Handshake Account Support
             </a>
           </div>
@@ -42,7 +41,7 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <Button href="/apply" variant="primary">
+            <Button href="#contact" variant="primary">
               Become a Client
             </Button>
           </div>
@@ -79,7 +78,7 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="pt-4">
-                <Button href="/apply" variant="primary" className="w-full">
+                <Button href="#contact" variant="primary" className="w-full">
                   Become a Client
                 </Button>
               </div>

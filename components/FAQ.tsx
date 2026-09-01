@@ -37,8 +37,8 @@ export default function FAQ() {
       answer: 'No. This is an independent service and does not claim affiliation with Handshake.',
     },
     {
-      question: 'How is account access handled securely?',
-      answer: 'Only authorized and secure account-access methods should be used. Never share unnecessary credentials or authentication codes.',
+      question: 'How is account security handled?',
+      answer: 'You retain control of your Handshake account. I do not need your password, authentication codes, or other sensitive login credentials to provide support. Never submit these credentials through this website or by email.',
     },
   ];
 

@@ -10,11 +10,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Handshake Account Support | Profile & Opportunity Assistance",
-  description: "Independent professional support for students and graduates who want help optimizing their Handshake presence, organizing opportunities, and preparing applications.",
+  description: "Independent professional Handshake support for students and graduates who want help improving their profile, organizing opportunities, and preparing applications.",
   openGraph: {
     title: "Handshake Account Support | Profile & Opportunity Assistance",
-    description: "Independent professional support for students and graduates who want help optimizing their Handshake presence, organizing opportunities, and preparing applications.",
+    description: "Independent professional Handshake support for students and graduates who want help improving their profile, organizing opportunities, and preparing applications.",
     type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

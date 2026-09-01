@@ -17,14 +17,14 @@ export default function FinalCTA() {
             Take the Next Step
           </h2>
           <p className="text-lg text-[#94a3b8] mb-8 max-w-2xl mx-auto">
-            Let's discuss your Handshake account and determine whether our management service is right for you.
+            Let's discuss your Handshake account and determine whether my support service is right for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/apply" variant="primary">
               Become a Client →
             </Button>
             <Button href="#contact" variant="secondary">
-              Contact Us
+              Contact Me
             </Button>
           </div>
         </motion.div>

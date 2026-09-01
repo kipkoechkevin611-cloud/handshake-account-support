@@ -23,7 +23,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Independent Service Status</h2>
             <p className="text-[#64748B] leading-relaxed">
-              This service is NOT affiliated with, sponsored by, operated by, or endorsed by Handshake. We do not represent Handshake, and we do not claim any official relationship with the Handshake platform. This is an independent support service.
+              This service is NOT affiliated with, sponsored by, operated by, or endorsed by Handshake. I do not represent Handshake, and I do not claim any official relationship with the Handshake platform. This is an independent support service.
             </p>
           </section>
 
@@ -44,7 +44,7 @@ export default function TermsOfService() {
               <li>Complying with applicable university or employer requirements</li>
               <li>Providing accurate information through their account</li>
               <li>Maintaining the security of their login credentials</li>
-              <li>Not sharing passwords, authentication codes, or MFA codes through this website</li>
+              <li>Not sharing passwords, authentication codes, or MFA codes through this website or email</li>
               <li>Reviewing and approving any applications or account changes</li>
             </ul>
           </section>
@@ -52,7 +52,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Prohibited Credential Sharing</h2>
             <p className="text-[#64748B] leading-relaxed">
-              Clients should NEVER submit passwords, authentication codes, MFA codes, banking passwords, or other sensitive login credentials through the public website or email. Any account access methods used must be authorized by the client and must respect platform security requirements.
+              Clients should NEVER submit passwords, authentication codes, MFA codes, banking passwords, or other sensitive login credentials through the public website or email. I do not need these credentials to provide support. All support must respect applicable platform security requirements.
             </p>
           </section>
 
@@ -63,7 +63,7 @@ export default function TermsOfService() {
             </p>
             <ul className="list-disc pl-6 text-[#64748B] space-y-2">
               <li>Eligible earnings are shared equally: 50% to the client and 50% to the support partner</li>
-              <li>The exact scope, eligible earnings, and payment process are agreed upon before services begin</li>
+              <li>The exact scope, qualifying earnings, payment process, responsibilities, and duration of the arrangement are agreed upon before services begin</li>
               <li>Not all future salary or earnings are automatically subject to the partnership</li>
               <li>Only earnings specifically covered by the written agreement are divided</li>
             </ul>
@@ -72,7 +72,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">No Guarantee of Opportunities or Earnings</h2>
             <p className="text-[#64748B] leading-relaxed">
-              No jobs, opportunities, interviews, offers, projects, internships, or earnings are guaranteed. Opportunities, interviews, offers, and earnings depend on many factors including client qualifications, market conditions, employer decisions, and successful application outcomes. The service does not promise or guarantee any specific results.
+              No jobs, interviews, opportunities, contracts, or earnings are guaranteed. Opportunities, interviews, offers, and earnings depend on many factors including client qualifications, market conditions, employer decisions, and successful application outcomes. The service does not promise or guarantee any specific results.
             </p>
           </section>
 
@@ -100,14 +100,14 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Changes to Terms</h2>
             <p className="text-[#64748B] leading-relaxed">
-              We may update these Terms of Service from time to time. Significant changes will be communicated to clients by email. Continued use of the service after changes constitutes acceptance of the updated terms.
+              I may update these Terms of Service from time to time. Significant changes will be communicated to clients by email. Continued use of the service after changes constitutes acceptance of the updated terms.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Contact</h2>
             <p className="text-[#64748B] leading-relaxed">
-              For questions about these Terms of Service, please contact: contact@handshake-account-support.com
+              For questions about these Terms of Service, please contact me at: contact@handshake-account-support.com
             </p>
           </section>
 

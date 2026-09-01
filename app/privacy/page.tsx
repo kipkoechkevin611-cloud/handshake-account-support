@@ -16,14 +16,14 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Introduction</h2>
             <p className="text-[#64748B] leading-relaxed">
-              Handshake Account Support ("we," "our," or "the service") is an independent professional service that helps clients optimize their Handshake presence, organize opportunities, and prepare applications. This Privacy Policy explains how we collect, use, and protect your information.
+              Handshake Account Support is an independent professional service that helps clients optimize their Handshake presence, organize opportunities, and prepare applications. This Privacy Policy explains how I collect, use, and protect your information.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Information We Collect</h2>
+            <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Information I Collect</h2>
             <p className="text-[#64748B] leading-relaxed mb-4">
-              Through the client application form, we collect:
+              Through the client application form, I collect:
             </p>
             <ul className="list-disc pl-6 text-[#64748B] space-y-2">
               <li>Full name</li>
@@ -35,14 +35,14 @@ export default function PrivacyPolicy() {
               <li>Short message describing your situation</li>
             </ul>
             <p className="text-[#64748B] leading-relaxed mt-4">
-              We do NOT collect passwords, authentication codes, MFA codes, banking passwords, or other sensitive login credentials through this website. Never submit such information through the public website.
+              I do NOT collect passwords, authentication codes, MFA codes, banking passwords, or other sensitive login credentials through this website. Never submit such information through this website or email.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-[#0B1220] mb-4">How We Use Your Information</h2>
+            <h2 className="text-xl font-semibold text-[#0B1220] mb-4">How I Use Your Information</h2>
             <p className="text-[#64748B] leading-relaxed mb-4">
-              We use the information you provide to:
+              I use the information you provide to:
             </p>
             <ul className="list-disc pl-6 text-[#64748B] space-y-2">
               <li>Review your application for potential service engagement</li>
@@ -56,28 +56,28 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Communication</h2>
             <p className="text-[#64748B] leading-relaxed">
-              We communicate with clients primarily through email and WhatsApp where appropriate. By submitting your application, you consent to receive communications from us regarding your application and potential service engagement.
+              I communicate with clients primarily through email and WhatsApp where appropriate. By submitting your application, you consent to receive communications from me regarding your application and potential service engagement.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Information Security</h2>
             <p className="text-[#64748B] leading-relaxed">
-              We take reasonable measures to protect your information. However, no method of transmission over the internet is completely secure. We cannot guarantee absolute security. For your protection, never share sensitive passwords, authentication codes, or security credentials through email or the website.
+              I take reasonable measures to protect your information. However, no method of transmission over the internet is completely secure. I cannot guarantee absolute security. For your protection, never share sensitive passwords, authentication codes, or security credentials through email or the website.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Third-Party Services</h2>
             <p className="text-[#64748B] leading-relaxed">
-              We use third-party services for email delivery (Resend) and website hosting (Vercel). These services have access to the information necessary to perform their functions. We do not sell your information to third parties.
+              I use third-party services for email delivery (Resend) and website hosting (Vercel). These services have access to the information necessary to perform their functions. I do not sell your information to third parties.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Data Retention</h2>
             <p className="text-[#64748B] leading-relaxed">
-              We retain your application information for as long as necessary to provide services, communicate with you, and comply with legal obligations. You may request deletion of your information by contacting us.
+              I retain your application information for as long as necessary to provide services, communicate with you, and comply with legal obligations. You may request deletion of your information by contacting me.
             </p>
           </section>
 
@@ -87,7 +87,7 @@ export default function PrivacyPolicy() {
               You have the right to:
             </p>
             <ul className="list-disc pl-6 text-[#64748B] space-y-2">
-              <li>Access the information we have about you</li>
+              <li>Access the information I have about you</li>
               <li>Request correction of inaccurate information</li>
               <li>Request deletion of your information</li>
               <li>Opt out of further communications</li>
@@ -97,21 +97,21 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Independent Service Disclaimer</h2>
             <p className="text-[#64748B] leading-relaxed">
-              Handshake Account Support is an independent service and is not affiliated with, sponsored by, operated by, or endorsed by Handshake. We do not claim ownership of client accounts or personal data. Clients remain responsible for complying with Handshake's Terms of Service and applicable university or employer requirements.
+              Handshake Account Support is an independent service and is not affiliated with, sponsored by, operated by, or endorsed by Handshake. I do not claim ownership of client accounts or personal data. Clients remain responsible for complying with Handshake's Terms of Service and applicable university or employer requirements.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Contact Information</h2>
             <p className="text-[#64748B] leading-relaxed">
-              If you have questions about this Privacy Policy or your information, please contact us at: contact@handshake-account-support.com
+              If you have questions about this Privacy Policy or your information, please contact me at: contact@handshake-account-support.com
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-[#0B1220] mb-4">Changes to This Policy</h2>
             <p className="text-[#64748B] leading-relaxed">
-              We may update this Privacy Policy from time to time. We will notify clients of significant changes by email. Your continued use of the service after such changes constitutes acceptance of the updated policy.
+              I may update this Privacy Policy from time to time. I will notify clients of significant changes by email. Your continued use of the service after such changes constitutes acceptance of the updated policy.
             </p>
           </section>
         </div>
