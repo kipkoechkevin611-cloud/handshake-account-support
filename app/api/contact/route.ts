@@ -81,16 +81,17 @@ export async function POST(request: NextRequest) {
       message: escapeHtml(message.trim()).slice(0, 2000),
     };
 
-    const contactEmail = process.env.CONTACT_EMAIL || 'contact@handshake-account-support.com';
+    const contactEmail = process.env.CONTACT_EMAIL || 'smartassignmentsolver@gmail.com';
     const fromEmail = process.env.FROM_EMAIL || 'noreply@handshake-account-support.com';
 
     // Send email to business owner
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: contactEmail,
-      subject: `New Handshake Support Client Application — ${sanitizedData.fullName}`,
+      replyTo: sanitizedData.email,
+      subject: `New Client Application — ${sanitizedData.fullName}`,
       html: `
-        <h2>New Client Application</h2>
+        <h2>NEW CLIENT APPLICATION</h2>
         <p><strong>Full Name:</strong> ${sanitizedData.fullName}</p>
         <p><strong>Email:</strong> ${sanitizedData.email}</p>
         <p><strong>Phone / WhatsApp:</strong> ${sanitizedData.phone}</p>
@@ -101,7 +102,9 @@ export async function POST(request: NextRequest) {
         <p>${sanitizedData.message.replace(/\n/g, '<br>')}</p>
         <p><strong>Agreement Accepted:</strong> Yes</p>
         <hr>
-        <p><small>Submitted: ${new Date().toLocaleString()}</small></p>
+        <p><small>Submission Date: ${new Date().toLocaleString()}</small></p>
+        <hr>
+        <p><small>This application was submitted through the Handshake Account Support website.</small></p>
       `,
     });
 

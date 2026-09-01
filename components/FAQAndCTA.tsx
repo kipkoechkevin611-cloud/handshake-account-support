@@ -140,7 +140,7 @@ export default function FAQAndCTA() {
       });
     } catch (error) {
       setIsSubmitting(false);
-      setSubmitError('Something went wrong while sending your application. Please try again.');
+      setSubmitError('Something went wrong while sending your application. Please try again or contact us directly at smartassignmentsolver@gmail.com.');
     }
   };
 

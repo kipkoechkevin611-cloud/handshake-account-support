@@ -70,11 +70,11 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <a
-                href="mailto:contact@handshake-account-support.com"
+                href="mailto:smartassignmentsolver@gmail.com"
                 className="flex items-center gap-2 text-[#94a3b8] hover:text-white transition-colors text-sm"
               >
                 <Mail size={16} />
-                contact@handshake-account-support.com
+                smartassignmentsolver@gmail.com
               </a>
             </div>
           </div>
